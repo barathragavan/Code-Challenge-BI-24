@@ -1,0 +1,23 @@
+public class FindLargestSmallestNumber {
+    public static void main(String[] args) {
+        // Initialize the array
+        int[] numbers = {55, 32, 45, 98, 82, 11, 9, 39, 50};
+
+        // Assume the first element is both the largest and smallest
+        int smallest = numbers[0];
+        int largest = numbers[0];
+
+        // Iterate through the array
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > largest) {
+                largest = numbers[i];
+            } else if (numbers[i] < smallest) {
+                smallest = numbers[i];
+            }
+        }
+
+        // Print the results
+        System.out.println("Largest Number is : " + largest);
+        System.out.println("Smallest Number is : " + smallest);
+    }
+}
